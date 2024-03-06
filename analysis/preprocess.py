@@ -2,7 +2,9 @@ import pandas as pd
 from googletrans import Translator
 
 def pre_missingvalue(df):
-
+    """
+    Applicable for user data
+    """
     __before_df = df
     __remove_missingvalues = __before_df.dropna()
     df = __remove_missingvalues[~__remove_missingvalues['gender'].fillna('').str.contains('unknown')]

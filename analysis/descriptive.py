@@ -12,8 +12,6 @@ def readcsv(filename):
     path = os.path.abspath(os.curdir) + '/data/' + filename + '.csv'
     return pd.read_csv(path, na_values=np.nan)
 
-# def __drop_missingvalues(df):
-
 def __print_describe(df_list):
     for i in df_list:
         print(i.describe())
